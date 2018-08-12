@@ -26,6 +26,7 @@ class App extends React.Component {
         this.Handle_Cancel = this.Handle_Cancel.bind(this);
         this.Handle_ShowForm = this.Handle_ShowForm.bind(this);
         this.Handle_Edit = this.Handle_Edit.bind(this);
+        localStorage.setItem("task", JSON.stringify(this.state.Items));
     }
     componentWillMount() {
         let Items = JSON.parse(localStorage.getItem("task"));
