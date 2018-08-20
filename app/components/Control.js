@@ -30,7 +30,7 @@ export class Control extends React.Component {
                 <Sort Handle_Sort_Click = {this.props.Handle_Sort}/>
 
                 {/* add */}
-                <div className="col-sm- col-md-4 col-lg-4 col-xl-4">
+                <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     {btn}
                     {/* Form */}
                     {form}
