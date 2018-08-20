@@ -36,32 +36,17 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
 /******/ 		}
 /******/ 	};
 /******/
 /******/ 	// define __esModule on exports
 /******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -178,7 +163,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.Sort = undefined;\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Sort = exports.Sort = function (_React$Component) {\n    _inherits(Sort, _React$Component);\n\n    function Sort(props) {\n        _classCallCheck(this, Sort);\n\n        var _this = _possibleConstructorReturn(this, (Sort.__proto__ || Object.getPrototypeOf(Sort)).call(this, props));\n\n        _this.state = {};\n        _this.HandleASC = _this.HandleASC.bind(_this);\n        _this.HandleDESC = _this.HandleDESC.bind(_this);\n        return _this;\n    }\n\n    _createClass(Sort, [{\n        key: \"HandleASC\",\n        value: function HandleASC() {\n            this.props.Handle_Sort_Click(\"ASC\");\n        }\n    }, {\n        key: \"HandleDESC\",\n        value: function HandleDESC() {\n            this.props.Handle_Sort_Click(\"DESC\");\n        }\n    }, {\n        key: \"render\",\n        value: function render() {\n            return _react2.default.createElement(\n                \"div\",\n                { className: \"col-sm-3 col-md-3 col-lg-3 col-xl-3\" },\n                _react2.default.createElement(\n                    \"div\",\n                    { className: \"btn-group\" },\n                    _react2.default.createElement(\n                        \"button\",\n                        { type: \"button\", onClick: this.HandleASC, className: \"btn btn-primary\" },\n                        \"level-ASC\"\n                    ),\n                    _react2.default.createElement(\n                        \"button\",\n                        { type: \"button\", onClick: this.HandleDESC, className: \"btn btn-primary\" },\n                        \"level-DESC\"\n                    )\n                )\n            );\n        }\n    }]);\n\n    return Sort;\n}(_react2.default.Component);\n\n//# sourceURL=webpack:///./app/components/Sort.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.Sort = undefined;\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Sort = exports.Sort = function (_React$Component) {\n    _inherits(Sort, _React$Component);\n\n    function Sort(props) {\n        _classCallCheck(this, Sort);\n\n        var _this = _possibleConstructorReturn(this, (Sort.__proto__ || Object.getPrototypeOf(Sort)).call(this, props));\n\n        _this.state = {};\n        _this.HandleASC = _this.HandleASC.bind(_this);\n        _this.HandleDESC = _this.HandleDESC.bind(_this);\n        return _this;\n    }\n\n    _createClass(Sort, [{\n        key: \"HandleASC\",\n        value: function HandleASC() {\n            this.props.Handle_Sort_Click(\"ASC\");\n        }\n    }, {\n        key: \"HandleDESC\",\n        value: function HandleDESC() {\n            this.props.Handle_Sort_Click(\"DESC\");\n        }\n    }, {\n        key: \"render\",\n        value: function render() {\n            return _react2.default.createElement(\n                \"div\",\n                { className: \"col-sm-4 col-md-4 col-lg-4 col-xl-4\" },\n                _react2.default.createElement(\n                    \"div\",\n                    { className: \"btn-group\" },\n                    _react2.default.createElement(\n                        \"button\",\n                        { type: \"button\", onClick: this.HandleASC, className: \"btn btn-primary\" },\n                        \"level-ASC\"\n                    ),\n                    _react2.default.createElement(\n                        \"button\",\n                        { type: \"button\", onClick: this.HandleDESC, className: \"btn btn-primary\" },\n                        \"level-DESC\"\n                    )\n                )\n            );\n        }\n    }]);\n\n    return Sort;\n}(_react2.default.Component);\n\n//# sourceURL=webpack:///./app/components/Sort.js?");
 
 /***/ }),
 

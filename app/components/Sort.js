@@ -17,7 +17,7 @@ export class Sort extends React.Component {
     }
     render() {
         return(
-            <div className="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <div className="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                 <div className="btn-group">
                     <button type="button" onClick={this.HandleASC} className="btn btn-primary">level-ASC</button>
                     <button type="button" onClick={this.HandleDESC} className="btn btn-primary">level-DESC</button>
